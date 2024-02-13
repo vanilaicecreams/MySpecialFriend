@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffabab;
+}
+
+.valentines-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.envelope {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    transition: transform 0.5s ease-in-out;
+    animation: tilt 5s infinite alternate; /* Continuous tilt animation */
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(-5deg); /* Initial tilt angle */
+    }
+    50% {
+        transform: rotate(5deg); /* Tilt to the other side */
+    }
+    100% {
+        transform: rotate(-5deg); /* Return to the initial tilt angle */
+    }
+}
+
+.envelope:hover {
+    transform: rotate(-10deg); /* Adjust the degree of tilt */
+}
+
+.envelope img {
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
